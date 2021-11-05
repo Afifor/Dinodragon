@@ -13,5 +13,8 @@ public interface SomeDudeRepository extends JpaRepository<SomeDude, Integer> {
 
     List<SomeDude> findByAgeIsGreaterThan(Integer age);
 
+    //Récupère la liste des personnes du genre donné, en les ordonnant par Age
+    List<SomeDude> findByGenderIsOrderByAgeAsc(String gender);
+
 
 }
